@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyyaml = "*"
+
+[dev-packages]
+"flake8" = "*"
+isort = "*"
+black = "==18.9b0"
+
+[requires]
+python_version = "3.7"
+
+#[scripts]
+#tests = "/bin/sh scripts/run_tests.sh"
