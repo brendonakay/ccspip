@@ -54,7 +54,8 @@ class CompressedGene:
         return self.decompress()
 
 
-class BitString(Generic[T]):
+class BitString:
+    # TODO: Make iterable
     def __init__(self) -> None:
         self.bit_string = 1 # sentinel
         self.counter = 0
@@ -62,9 +63,20 @@ class BitString(Generic[T]):
     def __len__(self) -> int:
         return self.counter
 
-    def add_bit(self, bit: int):
+    def __iter__(self) -> None:
+        # TODO
+        pass
+
+    def __getitem__(self) -> None:
+        # TODO
+        pass
+
+    def add_bit(self, bit: int) -> None:
         self.counter += 1
         self.bit_string <<= bit
+
+    def read_bit(self, location: int) -> int:
+        pass
 
 
 if __name__ == "__main__":
